@@ -17,3 +17,6 @@ public class Login {
 	    driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
 	    driver.findElement(By.id("username")).sendKeys("Tejas S");
 	    driver.findElement(By.cssSelector("input[type='password']")).sendKeys("tejas@2k");
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//a[@class='btn btn-primary btn-block']")).click();
+	    driver.quit();
