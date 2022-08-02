@@ -20,3 +20,6 @@ public class Login {
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("//a[@class='btn btn-primary btn-block']")).click();
 	    driver.quit();
+	 
+	    }
+	}
