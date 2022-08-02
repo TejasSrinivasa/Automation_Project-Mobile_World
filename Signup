@@ -16,3 +16,7 @@ public class SignUp{
 	    driver.findElement(By.linkText("Sign up")).click();
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("//input[@class='form-control']")).sendKeys("Tejas");
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("S");
+	    driver.findElement(By.cssSelector("input[type='Email']")).sendKeys("tejas.vs02@gmail.com");
+	    driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys("tejas@2k");
