@@ -5,3 +5,4 @@
   <classes>
   <class name="introduction.SignUp"/>
   <class name="introduction.Login"/>
+  <class name="introduction.Order"/>
