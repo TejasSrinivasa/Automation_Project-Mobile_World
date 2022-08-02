@@ -1,0 +1,18 @@
+package introduction;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SignUp{
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\tejas.s\\Desktop\\CD/chromedriver.exe");
+	    WebDriver driver = new ChromeDriver();
+		driver.get("https://mobileworld.azurewebsites.net/index.html");
+		Thread.sleep(2000);
+	    driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.linkText("Sign up")).click();
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//input[@class='form-control']")).sendKeys("Tejas");
