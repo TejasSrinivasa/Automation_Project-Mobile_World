@@ -3,10 +3,13 @@ package introduction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class SignUp{
-
-	public static void main(String[] args) throws InterruptedException {
+		
+	@Test
+	public void MWsignup() throws InterruptedException
+	{
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\tejas.s\\Desktop\\CD/chromedriver.exe");
 	    WebDriver driver = new ChromeDriver();
 		driver.get("https://mobileworld.azurewebsites.net/index.html");
@@ -20,3 +23,10 @@ public class SignUp{
 	    driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("S");
 	    driver.findElement(By.cssSelector("input[type='Email']")).sendKeys("tejas.vs02@gmail.com");
 	    driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys("tejas@2k");
+	    driver.findElement(By.cssSelector("input[type='date']")).sendKeys("29-7-2022");
+	    
+	    
+	    
+	    
+	    
+	    
