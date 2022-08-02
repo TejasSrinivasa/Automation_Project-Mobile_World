@@ -24,7 +24,9 @@ public class SignUp{
 	    driver.findElement(By.cssSelector("input[type='Email']")).sendKeys("tejas.vs02@gmail.com");
 	    driver.findElement(By.cssSelector("input[placeholder='Password']")).sendKeys("tejas@2k");
 	    driver.findElement(By.cssSelector("input[type='date']")).sendKeys("29-7-2022");
-	    
+	    driver.findElement(By.xpath("/html/body/div/div[2]/form/div[3]/div[4]/input")).click();
+	    driver.findElement(By.cssSelector("input[min='0']")).sendKeys("7676489722");
+	    driver.findElement(By.cssSelector("textarea[rows='3']")).sendKeys("Hello");
 	    
 	    
 	    
