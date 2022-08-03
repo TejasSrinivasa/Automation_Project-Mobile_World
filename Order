@@ -35,3 +35,12 @@ public class Order {
         driver.findElement(By.xpath("//input[@placeholder='12 Apartment or floor']")).sendKeys("#4 1st main 8th cross");
         driver.findElement(By.xpath("//input[@placeholder='Main St']")).sendKeys("Kottigepalya");
         driver.findElement(By.id("inputCity")).sendKeys("Banglore");
+	 WebElement staticDropdown=driver.findElement(By.id("inputState"));
+        Select dropdown=new Select(staticDropdown);
+        dropdown.selectByIndex(2);
+        driver.findElement(By.id("inputZip")).sendKeys("560091");
+        driver.findElement(By.xpath("//input[@rel='lenovo']")).click();
+        driver.findElement(By.cssSelector("input[placeholder='no of mobiles']")).sendKeys("1");
+        WebElement staticDropdow=driver.findElement(By.id("bought"));
+        Select dropdow=new Select(staticDropdow);
+        dropdow.selectByIndex(1);
