@@ -44,3 +44,11 @@ public class Order {
         WebElement staticDropdow=driver.findElement(By.id("bought"));
         Select dropdow=new Select(staticDropdow);
         dropdow.selectByIndex(1);
+	driver.findElement(By.id("gridCheck1")).click();
+        driver.findElement(By.xpath("(//input[@id='gridCheck1'])[2]")).click();
+        driver.findElement(By.xpath("//button[@data-toggle='modal']")).click();
+        driver.findElement(By.linkText("Close")).click();
+        driver.quit();
+        
+        }
+}
