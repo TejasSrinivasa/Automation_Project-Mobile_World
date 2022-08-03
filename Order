@@ -20,3 +20,18 @@ public class Order {
 		driver.get("https://mobileworld.azurewebsites.net/index.html");
 		driver.findElement(By.xpath("/html/body/nav/div/ul/li[4]/a")).click();
         Thread.sleep(2000);
+        driver.findElement(By.linkText("Order")).click();
+        Set<String>window=driver.getWindowHandles();  //window handling
+        Iterator<String>it=window.iterator(); //parent window to child window
+        String parentId=it.next();
+        String childId=it.next();
+        driver.switchTo().window(childId);
+        driver.findElement(By.xpath("//input[@class='form-control']")).sendKeys("Tejas");
+        driver.findElement(By.xpath("//html/body/div[1]/div/div[2]/form/div[1]/div[2]/input")).sendKeys("S");
+        driver.findElement(By.xpath("//input[@id='inputEmail']")).sendKeys("tejas.vs02@gmail.com");
+        driver.findElement(By.xpath("//input[@type='password']")).sendKeys("tejas@2k");
+        driver.findElement(By.id("flexRadioDefault1")).click();
+        driver.findElement(By.xpath("//input[@placeholder='00000000000']")).sendKeys("7676489722");
+        driver.findElement(By.xpath("//input[@placeholder='12 Apartment or floor']")).sendKeys("#4 1st main 8th cross");
+        driver.findElement(By.xpath("//input[@placeholder='Main St']")).sendKeys("Kottigepalya");
+        driver.findElement(By.id("inputCity")).sendKeys("Banglore");
